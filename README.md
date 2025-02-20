@@ -9,33 +9,83 @@ U|  _  |u   | |          /| |\ U|  _  |u| |___   |  _ <   | |___
 </pre>
 
 ```typescript
-class ComputerEngineer {
-    name: string;
-    role: string;
-    languagesSpoken: string[];
-    passions: string[];
+import { Creativity, Innovation, ProblemSolving } from './skills';
+import { React, TypeScript, NodeJS, NextJS, NestJS } from './technologies';
 
-    constructor() {
-        this.name = "Ammar Yasser";
-        this.role = "Computer Engineer";
-        this.languagesSpoken = ["English", "Arabic"];
-        this.passions = ["Building intuitive user interfaces", "Exploring new technologies", "Solving complex problems"];
-    }
+class AmmarYasser implements ComputerEngineer {
+  private name = "Ammar Yasser";
+  private role = "Computer Engineer";
+  private OS = "Tech Innovator";
+  private version = "1.0.0";
+  private languagesInstalled = ["English", "Arabic"];
+  
+  private readonly passions = [
+    "Crafting pixel-perfect UIs",
+    "Exploring cutting-edge tech",
+    "Solving complex problems with elegant code",
+    "Building scalable full-stack applications"
+  ];
 
-    introduce(): void {
-        console.log(`Hello, I'm ${this.name}, a passionate ${this.role}.`);
-        console.log(`I speak ${this.languagesSpoken.join(' and ')}.`);
-        console.log(`I'm passionate about: ${this.passions.join(', ')}.`);
-    }
+  private skills = new Set<Skill>([
+    new Creativity(level: "Boundless"),
+    new Innovation(type: "Disruptive"),
+    new ProblemSolving(approach: "Quantum Thinking")
+  ]);
 
-    engage(): void {
-        console.log("I'm excited to share my projects with you! Feel free to explore and connect.");
-    }
+  private favoriteStack = [React, NextJS, TypeScript, NodeJS, NestJS];
+
+  public boot(): void {
+    console.log(`Initializing ${this.name} OS...`);
+    console.log(`${this.OS} v${this.version} booted successfully!`);
+  }
+
+  public introduce(): void {
+    console.log(`
+    🚀 ${this.name} - ${this.role} 🚀
+    ===============================
+    OS: ${this.OS} v${this.version}
+    Languages Installed: ${this.languagesInstalled.join(' | ')}
+    Passion Modules: ${this.passions.map(p => `\n      - ${p}`).join('')}
+    `);
+  }
+
+  public runDiagnostics(): void {
+    console.log("Running system diagnostics...");
+    console.log("CPU: Overclocked brain operating at maximum efficiency");
+    console.log("GPU: Visualization cortex rendering creative solutions in real-time");
+    console.log("RAM: Vast knowledge base, ready for rapid access and application");
+    console.log("Storage: Infinite capacity for learning and growth");
+    console.log("Frontend Engine: Powered by React and Next.js");
+    console.log("Backend Engine: Turbocharged with Node.js and NestJS");
+    console.log("All systems operational and optimized for full-stack innovation!");
+  }
+
+  public engage(): void {
+    console.log(`
+    🌟 Full-Stack Engagement Protocol Initiated 🌟
+    =============================================
+    Greetings, tech visionaries and code artisans!
+    
+    I'm powered by limitless potential and a passion for end-to-end innovation.
+    Fluent in the languages of both frontend and backend, I'm here to turn ideas into scalable realities.
+    Let's collaborate to create the future – from server to client, and everything in between!
+    
+    Loading favorite stack: ${this.favoriteStack.join(' + ')}
+    Creativity engines: Overclocking
+    Innovation thrusters: Maximum power
+    Problem-solving radar: Scanning multiple dimensions
+    Full-stack capabilities: Fully operational
+    
+    Ready to revolutionize the tech world across the entire stack! Shall we architect the future together?
+    `);
+  }
 }
 
-const me = new ComputerEngineer();
-me.introduce();
-me.engage();
+const ammar = new AmmarYasser();
+ammar.boot();
+ammar.introduce();
+ammar.runDiagnostics();
+ammar.engage();
 ```
 
 
